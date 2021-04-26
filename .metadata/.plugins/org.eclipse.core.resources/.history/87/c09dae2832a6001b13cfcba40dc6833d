@@ -10,9 +10,9 @@ public static void main (String[] argv) {
     	    LocateRegistry.createRegistry (2010);
 	    	Scanner s=new Scanner(System.in);
 	    	System.out.println("ESCRIBE TU NOMBRE Y PRESIONA ENTER:");
-	    	String nombre=s.nextLine().trim();
+	    	String name=s.nextLine().trim();
  
-	    	Chat server = new Chat(nombre);	
+	    	Chat server = new Chat(name);	
 
 	    	Naming.rebind("rmi://localhost/ABC", server);
  
@@ -28,7 +28,7 @@ public static void main (String[] argv) {
 	    	}
  
     	}catch (Exception e) {
-    		System.out.println("[SISTEMA] SERVIDOR FALLIDO: " + e);
+    		System.out.println("[System] Server failed: " + e);
     	}
 	}
 }

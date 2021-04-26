@@ -9,14 +9,14 @@ public static void main (String[] argv) {
     try {
     	    LocateRegistry.createRegistry (2010);
 	    	Scanner s=new Scanner(System.in);
-	    	System.out.println("ESCRIBE TU NOMBRE Y PRESIONA ENTER:");
-	    	String nombre=s.nextLine().trim();
+	    	System.out.println("Enter Your name and press Enter:");
+	    	String name=s.nextLine().trim();
  
-	    	Chat server = new Chat(nombre);	
+	    	Chat server = new Chat(name);	
 
 	    	Naming.rebind("rmi://localhost/ABC", server);
  
-	    	System.out.println("[SISTEMA] CHAT DISPONIBLE ESCRIBE:");
+	    	System.out.println("[System] Chat Remote Object is ready:");
  
 	    	while(true){
 	    		String msg=s.nextLine().trim();
@@ -28,7 +28,7 @@ public static void main (String[] argv) {
 	    	}
  
     	}catch (Exception e) {
-    		System.out.println("[SISTEMA] SERVIDOR FALLIDO: " + e);
+    		System.out.println("[System] Server failed: " + e);
     	}
 	}
 }

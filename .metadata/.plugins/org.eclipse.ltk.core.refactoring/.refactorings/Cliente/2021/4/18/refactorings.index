@@ -1,1 +1,6 @@
 1619400334704	Move compilation unit
+1619401708391	Rename field 'name'
+1619401728536	Rename field 'client'
+1619401780407	Rename type 'ChatClient'
+1619401960910	Rename local variable 'name'
+1619401967431	Rename local variable 'client'

@@ -28,7 +28,7 @@ public static void main (String[] argv) {
 	    	}
  
     	}catch (Exception e) {
-    		System.out.println("[SISTEMA] SERVIDOR FALLIDO: " + e);
+    		System.out.println("[System] Server failed: " + e);
     	}
 	}
 }

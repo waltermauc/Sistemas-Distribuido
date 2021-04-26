@@ -3,22 +3,22 @@ import java.rmi.server.*;
  
 public class Chat extends UnicastRemoteObject implements ChatInterface  {
  
-	public String nombre;
-	public ChatInterface cliente=null;
+	public String name;
+	public ChatInterface client=null;
  
 	public Chat(String n)  throws RemoteException { 
-		this.nombre=n;   
+		this.name=n;   
 	}
 	public String getName() throws RemoteException {
-		return this.nombre;
+		return this.name;
 	}
  
 	public void setClient(ChatInterface c){
-		cliente=c;
+		client=c;
 	}
  
 	public ChatInterface getClient(){
-		return cliente;
+		return client;
 	}
  
 	public void send(String s) throws RemoteException{
