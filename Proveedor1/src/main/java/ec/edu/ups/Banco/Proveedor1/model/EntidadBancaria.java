@@ -17,6 +17,9 @@ public class EntidadBancaria {
 	
 	@Column(name = "saldo")
 	private double saldo;
+	
+	@Column(name = "proveedor")
+	private String proveedor;
 
 	public int getIdCuenta() {
 		return idCuenta;
@@ -41,7 +44,13 @@ public class EntidadBancaria {
 	public void setSaldo(double saldo) {
 		this.saldo = saldo;
 	}
-	
-	
+
+	public String getProveedor() {
+		return proveedor;
+	}
+
+	public void setProveedor(String proveedor) {
+		this.proveedor = proveedor;
+	}
 	
 }
